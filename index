@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chin-Jui | Personal Website</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+    background: #f5f7fa;
+    color: #1c2e45;
+    line-height: 1.8;
+}
+
+/* 導覽列 */
+nav {
+    background: #0b1f3a;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-family: Georgia, serif;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #9db9d5;
+}
+
+/* 首頁 */
+#home {
+    height: 85vh;
+    background: linear-gradient(135deg, #0b1f3a, #23476c);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 65px;
+    letter-spacing: 5px;
+    font-family: Georgia, serif;
+}
+
+#home p {
+    margin-top: 20px;
+    color: #d4dfeb;
+    letter-spacing: 2px;
+}
+
+.home-btn {
+    margin-top: 35px;
+    padding: 10px 28px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.home-btn:hover {
+    background: white;
+    color: #0b1f3a;
+}
+
+/* 共用區塊 */
+section {
+    padding: 90px 10%;
+}
+
+.section-title {
+    margin-bottom: 40px;
+}
+
+.section-title span {
+    color: #7892ae;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    color: #0b1f3a;
+    font-size: 32px;
+    margin-top: 8px;
+}
+
+/* About me */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.photo {
+    width: 280px;
+    height: 330px;
+    background: #dce5ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #526b86;
+    flex-shrink: 0;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    font-size: 23px;
+    color: #173b63;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    color: #65758a;
+    margin-bottom: 15px;
+}
+
+.info {
+    margin-top: 25px;
+    border-top: 1px solid #dce3eb;
+    padding-top: 15px;
+}
+
+/* 喜歡的東西 */
+#favorites {
+    background: #eaf0f6;
+}
+
+.favorite-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.favorite-card {
+    background: white;
+    padding: 35px 25px;
+    transition: 0.3s;
+}
+
+.favorite-card:hover {
+    transform: translateY(-5px);
+}
+
+.favorite-card span {
+    color: #7892ae;
+    font-size: 13px;
+}
+
+.favorite-card h3 {
+    color: #173b63;
+    margin: 15px 0;
+}
+
+.favorite-card p {
+    color: #718096;
+    font-size: 14px;
+}
+
+/* 作品與學習檔案 */
+.work-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.work-item {
+    background: white;
+    border: 1px solid #dce3eb;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.work-item:hover {
+    border-color: #7892ae;
+}
+
+.work-item h3 {
+    color: #173b63;
+    font-size: 18px;
+}
+
+.work-item p {
+    color: #718096;
+    font-size: 14px;
+}
+
+.work-item span {
+    color: #8a9bad;
+    font-size: 13px;
+}
+
+/* 頁尾 */
+footer {
+    background: #0b1f3a;
+    color: #c5d2e0;
+    text-align: center;
+    padding: 30px;
+    font-size: 13px;
+}
+
+/* 手機版 */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #home h1 {
+        font-size: 42px;
+    }
+
+    section {
+        padding: 65px 7%;
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .photo {
+        width: 100%;
+        height: 250px;
+    }
+
+    .favorite-list {
+        grid-template-columns: 1fr;
+    }
+
+    .work-item {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 導覽列 -->
+<nav>
+    <div class="logo">CHIN-JUI.</div>
+
+    <ul>
+        <li><a href="#home">首頁</a></li>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#favorites">喜歡的東西</a></li>
+        <li><a href="#works">作品、學習檔案</a></li>
+    </ul>
+</nav>
+
+<!-- 首頁 -->
+<section id="home">
+    <h1>CHIN-JUI</h1>
+    <p>Welcome to my personal website.</p>
+    <a href="#about" class="home-btn">了解更多</a>
+</section>
+
+<!-- About me -->
+<section id="about">
+
+    <div class="section-title">
+        <span>01 / ABOUT ME</span>
+        <h2>關於我</h2>
+    </div>
+
+    <div class="about-content">
+
+        <div class="photo">
+            <p>個人照片</p>
+        </div>
+
+        <div class="about-text">
+            <h3>Hello, I'm Chin-Jui.</h3>
+
+            <p>
+                哈囉！歡迎來到我的個人網站。
+                這裡記錄著我的生活、興趣，以及學習過程中的點點滴滴。
+            </p>
+
+            <p>
+                我喜歡接觸不同領域的新事物，
+                也希望透過每一次的嘗試，累積更多經驗與能力。
+            </p>
+
+            <div class="info">
+                <p><b>Name：</b> Chin-Jui</p>
+                <p><b>Interest：</b> 音樂、創作、設計</p>
+                <p><b>Personality：</b> 持續探索中</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- 喜歡的東西 -->
+<section id="favorites">
+
+    <div class="section-title">
+        <span>02 / MY FAVORITES</span>
+        <h2>喜歡的東西</h2>
+    </div>
+
+    <div class="favorite-list">
+
+        <div class="favorite-card">
+            <span>01 / MUSIC</span>
+            <h3>音樂</h3>
+            <p>喜歡音樂帶來的感受，以及不同音樂作品所呈現的故事。</p>
+        </div>
+
+        <div class="favorite-card">
+            <span>02 / CREATION</span>
+            <h3>創作</h3>
+            <p>喜歡設計與創作，享受將想法轉化成實際作品的過程。</p>
+        </div>
+
+        <div class="favorite-card">
+            <span>03 / INTEREST</span>
+            <h3>其他興趣</h3>
+            <p>記錄生活中喜歡的人事物，以及各種有趣的探索。</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- 作品、學習檔案 -->
+<section id="works">
+
+    <div class="section-title">
+        <span>03 / MY WORKS</span>
+        <h2>作品、學習檔案</h2>
+    </div>
+
+    <div class="work-list">
+
+        <div class="work-item">
+            <div>
+                <h3>自主學習</h3>
+                <p>自主學習計畫、研究過程與成果紀錄。</p>
+            </div>
+            <span>PROJECT</span>
+        </div>
+
+        <div class="work-item">
+            <div>
+                <h3>課程作品</h3>
+                <p>課堂作業、實驗紀錄與學習成果。</p>
+            </div>
+            <span>LEARNING</span>
+        </div>
+
+        <div class="work-item">
+            <div>
+                <h3>活動經歷</h3>
+                <p>社團參與、活動紀錄與幹部經驗。</p>
+            </div>
+            <span>EXPERIENCE</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- 頁尾 -->
+<footer>
+    © 2026 CHIN-JUI. All Rights Reserved.
+</footer>
+
+</body>
+</html>
